@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "58863980652",
+    "firebase_url": "https://flash-chat-870f2.firebaseio.com",
+    "project_id": "flash-chat-870f2",
+    "storage_bucket": "flash-chat-870f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58863980652:android:adbf809214137f92",
+        "android_client_info": {
+          "package_name": "com.liviuslaan.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58863980652-r02k6kaeof07i9lqmmd34fgkti1iku9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKlHcDUzaqz0UTwEJcVx_y4oNihiGLv64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58863980652-r02k6kaeof07i9lqmmd34fgkti1iku9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
