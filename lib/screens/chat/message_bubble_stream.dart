@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class MessageBubbleStream extends StatelessWidget {
   final firestore;
+  final myEmail;
 
-  MessageBubbleStream({@required this.firestore});
+  MessageBubbleStream({@required this.firestore, @required this.myEmail});
 
   @override
   Widget build(BuildContext context) {
@@ -20,13 +21,15 @@ class MessageBubbleStream extends StatelessWidget {
           );
         }
 
-        final messages = snapshot.data.documents;
+        final messages = snapshot.data.documents.reversed;
         List<MessageBubble> messageBubbles = [];
 
         for (var message in messages) {
+          final sender = message.data['sender'];
           final messageBubble = MessageBubble(
             messageText: message.data['text'],
-            messageSender: message.data['sender'],
+            messageSender: sender,
+            isMe: sender == myEmail,
           );
           messageBubbles.add(messageBubble);
         }
@@ -38,6 +41,7 @@ class MessageBubbleStream extends StatelessWidget {
               vertical: 20,
             ),
             children: messageBubbles,
+            reverse: true,
           ),
         );
       },

@@ -49,6 +49,7 @@ class _ChatScreenState extends State<ChatScreen> {
           children: <Widget>[
             MessageBubbleStream(
               firestore: _firestore,
+              myEmail: _loggedInUser != null ? _loggedInUser.email : '',
             ),
             Container(
               decoration: kMessageContainerDecoration,
